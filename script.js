@@ -57,3 +57,19 @@ const quotes = [
     author: "Reed Hastings",
   },
 ];
+
+quote = document.getElementById("quote");
+author = document.getElementById("author");
+
+function generateQuote() {
+  quotepick = randomQuote();
+
+  quote.innerText = quotes[quotepick].quote;
+  author.innerText = quotes[quotepick].author;
+}
+
+function randomQuote() {
+  let num = Math.floor(Math.random() * Math.floor(quotes.length));
+
+  return num;
+}
